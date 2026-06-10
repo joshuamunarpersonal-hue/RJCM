@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Pink &amp; White UCI MedTech</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(180deg,#ffe4ef,#ffffff);}
+nav{background:#f06292;color:white;padding:15px;position:sticky;top:0}
+nav ul{display:flex;justify-content:center;gap:20px;list-style:none;margin:0}
+.hero{background:linear-gradient(rgba(255,182,193,.85),rgba(255,255,255,.9));text-align:center;padding:50px}
+.hero img{width:120px;margin:10px}
+section{padding:30px}
+h2{text-align:center;color:#d81b60}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:15px}
+.card{background:white;padding:15px;border-radius:12px;box-shadow:0 2px 10px #ddd;text-align:center;cursor:pointer}
+.card:hover{background:#f8bbd0}
+.modal{display:none;position:fixed;inset:0;background:#0008}
+.box{background:white;max-width:800px;margin:5% auto;padding:20px;border-radius:15px}
+footer{background:#f06292;color:white;text-align:center;padding:20px}
+</style></head><body>
+<nav><ul><li>Home</li><li>Introduction</li><li>Meet the Interns</li><li>Laboratory Sections</li><li>Gratitude</li><li>Our Batch</li></ul></nav>
+<div class="hero">
+<img src="image-removebg-preview (4).png"/>
+<img src="image-removebg-preview (5).png"/>
+<h1>UNCIANO COLLEGES ANTIPOLO INC.</h1>
+<h2>Medical Technology Interns</h2>
+<p>Academic Year 2025-2026<br/>In Partnership with Bulacan Medical Center<br/>Learning Today, Serving Tomorrow.</p>
+</div>
+<section><h2>Welcome</h2><p align="center">Welcome to the official webpage of the Medical Technology Interns of Unciano Colleges Antipolo Inc.</p></section>
+<section><h2>Meet the Interns</h2><div class="grid" id="g"></div></section>
+<section><h2>Laboratory Sections</h2><div class="grid">
+<div class="card">Reception</div><div class="card">Phlebotomy</div><div class="card">Histopathology</div><div class="card">Clinical Chemistry</div><div class="card">Serology</div><div class="card">Microbiology &amp; Molecular Biology</div><div class="card">Clinical Microscopy</div><div class="card">Hematology</div><div class="card">Blood Bank</div>
+</div></section>
+
+<section><h2>Gratitude</h2><p align="center">Thank you to our mentors and Bulacan Medical Center.</p></section>
+<section><h2>Our Batch</h2><p align="center">Together we learned, served, and grew.</p></section>
+<div class="modal" id="m"><div class="box"><span onclick="m.style.display='none'" style="float:right;font-size:30px;cursor:pointer">×</span><h2 id="t"></h2><p id="p"></p></div></div>
+<footer>©2025-2026 UCI Medical Technology Interns</footer>
+<script>
+const n=['Bea','Paul','Amy','Camille','Nick','Christine','Trishia','Jane','Dannah','Darryl','Jiezel','Roxie','Marianne','Jimwell','Ellaine','Joshua','Daphne','Cerise'];
+const g=document.getElementById('g');
+n.forEach(x=>{let d=document.createElement('div');d.className='card';d.textContent=x;d.onclick=()=>{t.textContent=x;p.textContent='Hello! My name is '+x+'. Thank you to everyone who made our internship meaningful and unforgettable.';m.style.display='block';};g.appendChild(d);});
+window.onclick=e=>{if(e.target==m)m.style.display='none';}
+</script></body></html>
